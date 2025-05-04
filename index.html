@@ -7,15 +7,86 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header and main content remains the same as before -->
+    <header>
+        <div class="container">
+            <div class="logo">WealthWise</div>
+            <div class="tagline">Advanced Financial Tools for Smarter Decisions</div>
+        </div>
+    </header>
     
-    <!-- Scripts -->
-    <script src="scripts/main.js"></script>
-    <script src="scripts/mortgage.js"></script>
-    <script src="scripts/loan.js"></script>
-    <script src="scripts/savings.js"></script>
-    <script src="scripts/retirement.js"></script>
-    <script src="scripts/investment.js"></script>
-    <script src="scripts/debt-payoff.js"></script>
+    <main>
+        <div class="container">
+            <div class="calculator-container">
+                <div class="calculator-header">
+                    <h2>Advanced Finance Calculator</h2>
+                    <p>Select a calculator and input your details to get comprehensive financial analysis</p>
+                </div>
+                
+                <div class="calculator-selector">
+                    <div class="form-group">
+                        <label for="calculator-type">Select Calculator</label>
+                        <select id="calculator-type">
+                            <option value="">-- Choose a Calculator --</option>
+                            <option value="mortgage">Mortgage Calculator</option>
+                            <option value="loan">Loan Calculator</option>
+                            <option value="savings">Savings Calculator</option>
+                            <option value="retirement">Retirement Calculator</option>
+                            <option value="investment">Investment Calculator</option>
+                            <option value="debt-payoff">Debt Payoff Calculator</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="calculator-forms">
+                    <div class="calculator-placeholder">
+                        <p>Please select a calculator from the dropdown above to get started.</p>
+                    </div>
+                </div>
+                
+                <div id="results" class="results">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="summary">Summary</div>
+                        <div class="tab" data-tab="amortization">Amortization</div>
+                        <div class="tab" data-tab="charts">Charts</div>
+                    </div>
+                    
+                    <div id="summary" class="tab-content active">
+                        <h3>Calculation Summary</h3>
+                        <div id="result-content"></div>
+                    </div>
+                    
+                    <div id="amortization" class="tab-content">
+                        <h3>Payment Schedule</h3>
+                        <div id="amortization-content"></div>
+                    </div>
+                    
+                    <div id="charts" class="tab-content">
+                        <h3>Visualization</h3>
+                        <div id="chart-content"></div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 2rem;">
+                        <button onclick="window.print()" class="button-secondary">Print Results</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">About</a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 WealthWise Financial Tools. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script src="scripts.js"></script>
 </body>
 </html>
